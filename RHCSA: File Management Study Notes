@@ -1,0 +1,41 @@
+# 📝 RHCSA: File Management Study Notes
+*Date: October 8th 2026*
+
+---
+
+## 🟥 Section 1: Core Commands
+*Type the commands you see in the video and a short note on what they do.*
+
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+
+---
+
+## 🟥 Section 2: Links (Soft vs Hard)
+*Fill these in when the video explains shortcuts and pointers.*
+
+* **Soft Link (Symlink):** ________________________________________
+  * Command syntax: `ln -s _____ _____`
+* **Hard Link:** ________________________________________
+  * Command syntax: `ln _____ _____`
+
+---
+
+## 🟥 Section 3: Archiving & Compression
+*Fill these in during the `tar` or zip sections.*
+
+* **To Pack/Tar:** `tar -cvf _____ _____`
+* **To Unpack/Extract:** `tar -xvf _____`
+* **Difference between tar and gzip:** ________________________________________
+
+---
+
+## 💡 Tricky Rules & Reminders
+*Write down anything the instructor says to watch out for on the exam.*
+
+> ⚠️ **Gotcha 1:** ________________________________________
+> ⚠️ **Gotcha 2:** ________________________________________
+
+---
