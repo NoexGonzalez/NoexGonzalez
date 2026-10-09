@@ -39,3 +39,109 @@
 > ⚠️ **Gotcha 2:** ________________________________________
 
 ---
+# 📝 Skillsoft RHCSA: File Management Cheat Sheet
+
+---
+
+## 💻 File Management /Using Input & Output Redirection
+________________________________________________________
+
+
+*Add your short shorthand notes here as the video plays (e.g., `ls -lS` --> -S = sort by size):*
+
+* `ls -l`   --> -l = long list format (shows permissions, owner, size)
+* `ls -lh`  --> -h = human readable sizes (shows K, M, G instead of raw bytes)
+* `ls -la`  --> -a = show all files (including hidden files starting with a dot)
+* `ls -lS`  --> -S = sort files by size (largest first)
+* `ls -`  --> __________________________________________________
+* '<' = Input Redirection (Operator) -->  *Note: Can be used with "grep -i" to redirect the  input/info source (whichever file or dir. user wants to search contents of) Use Ex: grep -i "Codey" < 2013Sales (Using example from SkillSoft Course vid)
+# Redirecting Command Results to a file & Appending the "original" file. (Adding to it without deleting anything written prior)
+* `>`  --> Redirect Output (Operator) - Redirects the result of the entered command to file instead of displaying onscreen. Would look like this in use:  (command name) > (filename.filetype) --> who > 
+* `>>`  --> = Append Operator (Same as > but this adds to the existing path without without overriding/deleting older entries. 
+* `grep`  --> Line Filtering tool
+* `grep -i "_____" < _______` -> 
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `sort <`  --> Will sort file contents by regin first, sorts by left-most column unless otherwise specified (list format) Use Ex: sort < 2013Sales (From SkillSoft Course Vid) 
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+
+## Combining Input & Output Redirection 
+* 'sort < 2013Sales > 2013Sales_sorted.txt --> Breakdown of Command (What this does): This runs a command to sort the specified file and then uses > (output redirection) to write a new file (or existing just specify existing file) and display the result inside the file being created or that already exists. 
+- Personal Comment: Learn/Verify how to use output redirection operator when adding new result for the sort command to existing file - without overriding previous entries. (Question: Does the append ">>" operator need to be used in this case? That's the exact purpose of the append operators existence, to append to existing files safely.)
+
+## How to Use Pipes --> Passing the result of one command to the next command to the right. (Pipelining it)
+* `cat <filename.txt> | sort`  --> Breakdown of what we're telling the computer to do is to read the file we want it to read, then pipe the result of the read command (cat) to the sort command to then sort it after having read & displayed the file contents.
+* `_____`  --> Sort file by region (left-most column) then remove line that contains the region. (need to use "cat" command to read file content(s) &  be able to use the filter) --> Pretty sure that's also called an "Assumptive command" or something. Gotta double check on this later to not sound silly lol. 
+* `_____`  --> __________________________________________________
+* `grep "<value>" -i'  --> 
+* Notes (grep and switch operators): When being used it should be applied in the following order; grep ; ___ to be continued/finished later today
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+* `_____`  --> __________________________________________________
+
+
+
+
+---
+
+## 📦 Tar & Compression
+*Flags for packing and archiving:*
+
+* `tar -cvf`  --> -c = create archive, -v = verbose (show progress), -f = file name
+* `tar -xvf`  --> -x = extract files out of the archive
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+* `_____`    --> __________________________________________________
+
+---
+
+## 💡 Quick Exam Reminders
+*Drop quick one-liners here for rules or things to watch out for:*
+
+- Absolute paths start with `/`
+- Relative paths start from where you are standing right now
+- 
+- 
+- 
+- 
+- 
+- 
