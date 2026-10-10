@@ -1,20 +1,52 @@
-# 📝 RHCSA: File Management Study Notes
+# 📝 RHCSA: File Management Course Study Notes
 *Date: October 8th 2026*
-
+*Date: October 9th 2026*
 ---
 
 ## 🟥 Section 1: Core Commands
 *Type the commands you see in the video and a short note on what they do.*
 
-* `_____` : ________________________________________
+* `grep "inet"` : filter inet queries
 * `_____` : ________________________________________
 * `_____` : ________________________________________
 * `_____` : ________________________________________
 
 ---
 
-## 🟥 Section 2: Links (Soft vs Hard)
-*Fill these in when the video explains shortcuts and pointers.*
+## 🟥 Section 2: Using Pipes (Pipeline Command)
+* `cat 2013Sales | sort` : Read files contents and pipe the right or to the sort command. (or new command(s)
+* `cat 2013Sales | sort | grep -v "All"` : Pipes to grep command which lets you filter lines, in this example used the -v " " operator to exclude result for the value we provided.
+* `cat 2013Sales | sort | grep -v "All" | grep -v "Last"` : Applies 2nd pipeline to use 2nd filter on result.
+* `_____` : ________________________________________
+* `ifconfig` : Show network interfaces
+* `ifconfig eno16777736` : To show network configurations specifically for eno16777736 network.
+* `ifconfig eno16777736 | grep "inet" | grep -v "inet6"` : Translation: Display network configurations for eno16777736 network specifically and pipe that and filter search result to include inet queries then pipe it again and filter to exclude inet6 queries.
+* `ifconfig eno16777736 | grep "inet" | grep -v "inet6" | tr -s " " ":"` : (tr = translate command) Translation: show network configs. for eno167 and then pipe it to filter to include inet and then pipe again to exclude inet6, then pipe a third time to translate and squeeze occurrences of spaces
+* `fconfig eno16777736 | grep "inet" | grep -v "inet6" | tr -s " " ":" | cut -f3 -d ":"` : ^ Same except adds new pipe to now cut field #3 from the result and -d operator tells the computer what the delimiter symbol is represented (separation mark/symbol)  ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+* `_____` : ________________________________________
+
+
+*Note: Can pipe any valid linux command
+
+
+
+
+
+
+
+
+
+
 
 * **Soft Link (Symlink):** ________________________________________
   * Command syntax: `ln -s _____ _____`
