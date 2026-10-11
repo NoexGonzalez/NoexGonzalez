@@ -9,11 +9,11 @@
 * `grep "inet"` : filter inet queries
 * `_____` : ________________________________________
 * `_____` : ________________________________________
-* `_____` : ________________________________________
+* `_____` : _______________________________________
 
 ---
 
-## 🟥 Section 2: Using Pipes (Pipeline Command)
+## 🟥 Using Pipes (Pipeline Command) Pipe = " | "
 * `cat 2013Sales | sort` : Read files contents and pipe the right or to the sort command. (or new command(s)
 * `cat 2013Sales | sort | grep -v "All"` : Pipes to grep command which lets you filter lines, in this example used the -v " " operator to exclude result for the value we provided.
 * `cat 2013Sales | sort | grep -v "All" | grep -v "Last"` : Applies 2nd pipeline to use 2nd filter on result.
@@ -23,7 +23,7 @@
 * `ifconfig eno16777736 | grep "inet" | grep -v "inet6"` : Translation: Display network configurations for eno16777736 network specifically and pipe that and filter search result to include inet queries then pipe it again and filter to exclude inet6 queries.
 * `ifconfig eno16777736 | grep "inet" | grep -v "inet6" | tr -s " " ":"` : (tr = translate command) Translation: show network configs. for eno167 and then pipe it to filter to include inet and then pipe again to exclude inet6, then pipe a third time to translate and squeeze occurrences of spaces
 * `fconfig eno16777736 | grep "inet" | grep -v "inet6" | tr -s " " ":" | cut -f3 -d ":"` : ^ Same except adds new pipe to now cut field #3 from the result and -d operator tells the computer what the delimiter symbol is represented (separation mark/symbol)  ________________________________________
-* `_____` : ________________________________________
+
 * `_____` : ________________________________________
 * `_____` : ________________________________________
 * `_____` : ________________________________________
@@ -38,13 +38,31 @@
 
 *Note: Can pipe any valid linux command
 
+## 🟥 FileName Globbing - Allows selection of files based on a pattern match. (Select which files to display)
+* `ls *2014*` : ________________________________________
+* `ls *201[34]*` : When square brackets are used during filename globbing (filtering). That means you're trying to match for one items inside of the bracket not both at the same time.
+* `ls *[East,West]*` : Multiple items can be "globbed" or matched by using a comma to seperate each item.
+* `ls *{2013..2015}*` : *{<x>..<x>}* = Formula to use filename globbing. Used to set the range to search in/filter -> like saying, show me any queries from a all the way to c. --> !!The contacts app is literally a perfect example. Lists your saved contacts by name starting the listing range from a all the way to . or z. Explanation of what the each symbol represents/is in chronological order (left to right as it actually reads)-->  * = Globbing range start point (the one before the opening "{"), then open with { and the first <x> represents the value that you'd want to start at then seperate with .. and the value you want it to end at in the second <x> then close with } and the * at the end represents where to stop globbing (end point).
+- Note for Filename Globbing: if you do not include the 2nd asterisk (globbing end point symbol) then it will not have an end point set. (Do not need an * if the second <x> globbing item are the final characters of the filename.
+* `ls [HC][A-Z][0-9][0-9]???` : ls queries starting with H and C, for first letter, and uppercase letter in A to Z range for second letter of name, and any # from 1 through 9 for third character. 
 
+## 🟥 Switching Shells & Users in the Shell
+* 'su' : Switch User Command in Linux (Example "su noexgonzalez")
+* `su - noexgonzalez`: Runs startup scripts for the user. "-" means run start up scripts when used with su command to run start up scripts for the users account thats being signed into.
+* `echo $SHELL`: Displays type of shell you're in.
 
-
-
-
-
-
+## 🟥🟥🟥 Switching & Using TTY Consoles (TeleType Terminal)
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
+* `_____`: ________________________________________
 
 
 
@@ -67,7 +85,7 @@
 ## 💡 Tricky Rules & Reminders
 *Write down anything the instructor says to watch out for on the exam.*
 
-> ⚠️ **Gotcha 1:** ________________________________________
+> ⚠️ **Gotcha 1:** 'setenv' ONLY works in csh (c shells)
 > ⚠️ **Gotcha 2:** ________________________________________
 
 ---
