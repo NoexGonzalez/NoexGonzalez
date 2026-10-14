@@ -51,19 +51,61 @@
 * `su - noexgonzalez`: Runs startup scripts for the user. "-" means run start up scripts when used with su command to run start up scripts for the users account thats being signed into.
 * `echo $SHELL`: Displays type of shell you're in.
 
-## 🟥🟥🟥 Switching & Using TTY Consoles (TeleType Terminal)
+## 🟥🟥🟥 Switching & Using TTY Consoles (TeleType Terminal) -> Multiple Users connected to single unix host (Each user has their own screen & keyboard ) Most linux implementations have 7
+* `_____`: They have their own screen & keyboard --> TT
 * `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
-* `_____`: ________________________________________
+* `Ctrl+Alt+F1`: Returns to GUI (Return to Root)
+* `Ctrl+Alt+F2`: Switches to TTY2 and asks for user login on TTY2 console.
+* `Ctrl+Alt+F3`: Log into a 3rd user on TTY3 console.
+* ' _____ ': ________________________________________
+* ' _____ ': ________________________________________
 
+
+## 🟥🟥🟥🟥 Searching for Files Using Find command
+* ' find -name "Project*" ': Recursively searches filesystem for any filenames that include the characters enquoted.
+* ' find . -type f -print | wc -l ': .=current directory, -type f=searching for files types only, -print=print back result, | wc -l=piping the result to word count command and -l means count the # of lines
+* ' find -user noexgonzalez ': Search for files based on owning user of a file
+* ' ls -l Projects ': List long listing of Projects Directory
+* ' _____ ': Look for files based on date & timestamps
+* ' touch Newname.txt ': touch command creates a new file
+* ' find -cmin -3 ': find and list projects created or modified within the last 3 minutes
+* ' _____ ': ________________________________________
+* ' _____ ': ________________________________________
+* ' _____ ': ________________________________________
+## 🟥🟥 Perform Actions on Files that are Found
+* ' _____ ': ________________________________________
+* ' find -user noexgonzalez -name "Project[0-9][0-9].txt" ': Find files owned by user noexgonzalez where the name begins with Project followed by and # 0-9 and then followed by another # 0-9 and then ending with .txt
+* ' find -user noexgonzalez -name "Project[0-9][0-9].txt" -exec ls -l {} \;': -exec ls -l {} \;= Execute a long listing command with a placeholder for each listing ({}) and to close the statement \;
+* ' find -user noexgonzalez -name "Project[0-9][0-9].txt" -exec mv {} / \; ': Instead of executing a long listing command, we now execute a move command to move the file into the root of the filesystem (/) then close the -exec command with \;
+* ' ls /P* ': list files in root (/) with first letter P and *=any character follows?
+* ' find -type f -size +500c -exec mv {} /UserFiles/Large \; ': search for files 500+ characters or byters in size (-size +500c) then execute the move command for each place older into the Userfiles large directory. (-exec mv {} /Userfiles/Large \;
+* ' _____ ': ________________________________________
+## 🟥🟥 Which and Locate Commands
+* which --> used to return location of a binary program
+* ' which ifconfig ': Tells you where the ifconfig binary program exists
+* ' which who ': Tells you where the binary executable exists. (So just gives details on liinux commands)
+* ' _____ ': ________________________________________
+- How is locate different from which? --> Benefit= Searches databases. Much quicker than searching filesystem. Downside=Result only as up to date as last time updatedb was run.
+* ' locate -S ': Give statistics
+* ' updatedb ': updates your linux command database daily as a cron job. Cron= A service on linux that runs recurring scheduled jobs. Exists in the /etc files.
+* ' locate 2013Sales ': ________________________________________
+* ' locate -i sales ': Does a case insensitive search of your files names to find any with the word sales in the name. (Note you do not need to use wildcards with the locate command like you would the find and ls commands.
+* ' locate -ic sales ': Same thing ^ but shows the total count of the total number of results 
+
+
+
+## 🟥🟥 Use VIM to create & edit files. VIM=CLI text editing tool
+* ' vim ': Opens the text edit tool, note that by default it opens in "command mode" and it treats anything thats typed as a command instead of treating them as edits within file.
+* ' <Press Inset Key> ': Enter insert mode
+- In Insert Mode
+* ' Esc ': Return to commmand mode
+* ' :w /UserFiles/Subnets ': :w=Write, then write path and filename to save to/as.
+* ' :wq ': Write & Quit vim editor
+* ' <Press D key x2 with cursor on line ': Delete line in VIM. (Adv VIM cmmand)
+* ' <Tap Y key then press P x1 for paste> ': Copy & Paste
+* *in command mode* ':%s/halifax/Vancouver/i ': Search & Replace text. -> %s=subsituting, /halifax=the word halifax,/Vancouver=With the word vancouver, /i= case insensitive search
+* ' _____ ': ________________________________________
+* ' _____ ': ________________________________________
 
 
 * **Soft Link (Symlink):** ________________________________________
